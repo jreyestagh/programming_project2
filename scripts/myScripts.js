@@ -13,9 +13,6 @@ function startCountdown() {
         return;
     }
 
-    startBtn.disabled = true;
-    timeInput.disabled = true;
-
     const pendingItem = document.createElement("li");
     pendingItem.innerText = `Timer: ${seconds} Seconds`;
     pendingList.appendChild(pendingItem);
@@ -34,8 +31,6 @@ function startCountdown() {
             completedItem.innerText = `${seconds} Seconds - Completed`;
             completedList.appendChild(completedItem);
 
-            startBtn.disabled = false;
-            timeInput.disabled = false;
             timeInput.value = "";
         }
     }, 1000);
