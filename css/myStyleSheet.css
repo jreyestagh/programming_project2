@@ -36,7 +36,7 @@ li{
 .pendingList{
     width: 50vw;
     color: #f7dc6f;
-    max-height: 1200px;
+    max-height: 600px;
     overflow-y: auto;
 }
 
