@@ -23,7 +23,7 @@ function startCountdown() {
     let remainingTime = seconds;
     const countdownTimer = setInterval(() => {
         if (remainingTime > 0) {
-            pendingItem.innerText = `Timer: ${remainingTime} seconds`;
+            pendingItem.innerText = `Timer: ${remainingTime} Seconds`;
             remainingTime--;
         } else {
             clearInterval(countdownTimer);
@@ -31,7 +31,7 @@ function startCountdown() {
             alert("Your time is up!!!!");
 
             const completedItem = document.createElement("li");
-            completedItem.innerText = `${seconds} seconds - Completed`;
+            completedItem.innerText = `${seconds} Seconds - Completed`;
             completedList.appendChild(completedItem);
 
             startBtn.disabled = false;
