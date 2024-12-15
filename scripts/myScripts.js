@@ -1,33 +1,16 @@
-const newItem = document.getElementById("newItemTxt");
-const addButton = document.getElementById("newItemBtn");
-const pendingList = document.getElementById("pending");
-const completedList = document.getElementById("completed");
+const timeInput = document.getElementById("timeInput");
+const startBtn = document.getElementById("startBtn");
+const pendingList = document.getElementById("pending").querySelector("ul");
+const completedList = document.getElementById("completed").querySelector("ul");
 
-addButton.addEventListener("click", addItemFunc);
-function addItemFunc(){ 
-    if(newItem.value !=""){
-        const addItem = document.createElement("li")
-        addItem.innerHTML = newItem.value
-        pendingList.appendChild(addItem)
-        newItem.value = ""
-    }
-    else {
-        alert("Please provide a task to add.")
-    }
-}
+startBtn.addEventListener("click", startCountdown);
 
-pendingList.addEventListener("click", function(){ pendingEventFunc(event)})
-function pendingEventFunc(event){
-    if(event.target.localName == "li"){
-        const item = event.target
-        completedList.appendChild(item)
-    }
-}
+function startCountdown() {
+    const seconds = parseInt(timeInput.value);
 
-completedList.addEventListener("click",function(){completedEventFunc(event)})
-function completedEventFunc(event){
-    if(event.target.localName == "li"){
-        const item = event.target
-        pendingList.appendChild(item)
+    if (isNaN(seconds) || seconds < 1 || seconds > 60) {
+        alert("Please enter a time ranging between 1 and 60 seconds.");
+        return;
     }
+    
 }
