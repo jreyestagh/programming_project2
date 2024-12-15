@@ -4,11 +4,12 @@
 ul{
     list-style-type: style none;
     padding: 0;
+    background-color: #1c2833;
 }
 
 .content{
     height: 100vh;
-    background: #f0f0f0;
+    background: #1c2833;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -17,7 +18,7 @@ ul{
 
 .main-title{
     font-size: 3em;
-    color: teal;
+    color: #73c6b6;
 }
 
 li{
@@ -25,14 +26,16 @@ li{
     background: white;
     margin: 10px;
     padding: 20px;
-    font-size: 18px;
+    font-size: 48px;
     text-align: center;
-    color: teal;
+    color: #abebc6;
     position: relative;
 }
 
 .pendingList{
     width: 50vw;
+    color: #f7dc6f;
+    
 }
 
 .formItems{
@@ -45,6 +48,8 @@ li{
 .formItems input{
     font-size: 28px;
     padding: 10px 20px;
+    background-color: #fcf3cf;
+    width: 70px;
 }
 
 .formItems button{
@@ -57,8 +62,8 @@ li{
 
 .formItems button:hover{
     cursor: pointer;
-    background: white;
-    color: teal;
+    background: #186a3b;
+    color: #58d68d;
 }
 
 .formItems button:active{
@@ -66,7 +71,12 @@ li{
     color:white;
 }
 
+#pending li{
+    background-color: #145a32;
+}
+
 #completed li{
     text-decoration: line-through;
-    color:red;
+    color: #e6b0aa;
+    background-color: #641e16;
 }
