@@ -80,3 +80,11 @@ li{
     color: #e6b0aa;
     background-color: #641e16;
 }
+
+.description{
+    color: #d6eaf8;
+    text-align: center;
+    margin-bottom: 50px;
+    max-width: 420px;
+    padding: 0 35px;
+}
