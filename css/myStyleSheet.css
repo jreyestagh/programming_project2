@@ -32,7 +32,7 @@ li{
     position: relative;
 }
 
-.pendingTimer{
+.pendingList{
     width: 50vw;
     color: #f7dc6f;
     
@@ -75,7 +75,7 @@ li{
     background-color: #145a32;
 }
 
-#completedTimer li{
+#completed li{
     text-decoration: line-through;
     color: #e6b0aa;
     background-color: #641e16;
