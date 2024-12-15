@@ -16,14 +16,24 @@ function startCountdown() {
     startBtn.disabled = true;
     timeInput.disabled = true;
 
+    const pendingItem = document.createElement("li");
+    pendingItem.innerText = `Timer: ${seconds} seconds`;
+    pendingList.appendChild(pendingItem);
+
     let remainingTime = seconds;
     const countdownTimer = setInterval(() => {
         if (remainingTime > 0) {
-            console.log(`Time remaining: ${remainingTime} seconds`);
+            pendingItem.innerText = `Timer: ${remainingTime} seconds`;
             remainingTime--;
         } else {
             clearInterval(countdownTimer);
+            pendingList.removeChild(pendingItem);
             alert("Your time is up!!!!");
+
+            const completedItem = document.createElement("li");
+            completedItem.innerText = `${seconds} seconds - Completed`;
+            completedList.appendChild(completedItem);
+
             startBtn.disabled = false;
             timeInput.disabled = false;
             timeInput.value = "";
