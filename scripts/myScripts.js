@@ -17,7 +17,7 @@ function startCountdown() {
     timeInput.disabled = true;
 
     const pendingItem = document.createElement("li");
-    pendingItem.innerText = `Timer: ${seconds} seconds`;
+    pendingItem.innerText = `Timer: ${seconds} Seconds`;
     pendingList.appendChild(pendingItem);
 
     let remainingTime = seconds;
